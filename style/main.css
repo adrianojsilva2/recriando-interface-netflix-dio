@@ -1,0 +1,144 @@
+/* criar regras de formatação, independente do navegador*/
+
+/*definir variaveis dentro do css*/
+/* se precisar trocar as cores, só vai precisar trocar aqui*/
+:root{
+    --vermelho: #E50914;
+    --preta: #141414;
+
+}
+
+
+/*  reset css
+    se refere a todo documento
+    - box-sizing limitar a borda da caixa
+*/
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box ;
+
+}
+
+/*elementos base*/
+body{
+    background: var(--preta);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* referencia a classe com o ponto  */
+/* flex box alinhar os elementos em tela */
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* fonte, tamanho e cor do logo (NETFLIX)*/
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+/* retirar o sublinhado e mudar cor, dos textos de navegação*/
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+/*pegar evento para toda vez que passar o mouse em cima do
+menu navegação, modifica a aparência*/
+header nav a:hover{
+    color: #fff;
+}
+
+/*filme principal*/
+
+/*inserir a imagem do filme*/
+/*mudar tamanho; área de cobertura*/
+/*linear gradiente, vai criar uma camada de cor escura linear na imagem*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50) 100%),  url('/img/house-of-cards.jpg');
+
+    height: 400px;
+    background-size: cover;
+
+    /*colocar os elementos para baixo (botoes)*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*começar sempre da esquerda*/
+    align-items: flex-start;
+
+}
+
+/*separando com espaçamento o texto do botão*/
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+/* mudar a fonte do texto*/
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*modificar botao*/
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    /*padding espaço interno*/
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    /*mudar cursor para indicar area clicavel*/
+    cursor: pointer;
+
+    /*transicao de animacao*/
+    transition: .3s ease all;
+}
+
+/*mudar cor do botao quando passar o mouse, inverter as cores*/
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+/*espaçamento do icone no botao*/
+.botao i{
+    margin-right: 8px;
+}
+
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+/*mudar o tamanho das imagens do carousel*/
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+/*para o carrosel desgrudar da caixa de cima*/
+.carrosel-filmes{
+    margin-top: 5px;
+}
